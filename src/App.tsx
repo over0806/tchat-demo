@@ -36,7 +36,10 @@ interface Job {
 
 
 
-const API_BASE_URL = '';
+// 自動偵測環境，若是本地開發則指向 8000 埠號，若是 Vercel 部署則使用相對路徑
+const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://127.0.0.1:8000'
+  : '';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<Tab>('match');
