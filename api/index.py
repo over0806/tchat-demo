@@ -1,4 +1,5 @@
 import os
+# Version: 1.0.1
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from supabase import create_client, Client
