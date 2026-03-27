@@ -38,7 +38,7 @@ interface Job {
 
 // 自動偵測環境，若是本地開發則指向 8000 埠號，若是 Vercel 部署則使用相對路徑
 const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-  ? 'http://127.0.0.1:8000'
+  ? 'http://127.0.0.1:8080'
   : '';
 
 export default function App() {
